@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../components/login.css";
 
 export const Register = (props) => {
   const [email, setEmail] = useState();
@@ -16,7 +17,7 @@ export const Register = (props) => {
       <form className="register-form" onSubmit={handleSubmit}>
         <h2>CREATE ACCOUNT </h2>
         <label htmlFor="name">Full name:</label>
-        <input value={name} name="name" id="name" placeholder="Full Name"/>
+        <input value={name} name="name" id="name" placeholder="Full Name" />
         <label htmlFor="email">E-mail:</label>
         <input
           value={email}
@@ -41,7 +42,12 @@ export const Register = (props) => {
       </form>
       <p>
         If you already have an account?
-        <button className="link-btn" onClick={()=>props.onFormSwitch('login')}>Log in</button>
+        <button
+          className="link-btn"
+          onClick={() => props.onFormSwitch("login")}
+        >
+          Log in
+        </button>
       </p>
     </div>
   );

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../components/login.css";
 
 export const Login = (props) => {
   // initially values are empty
@@ -35,13 +36,22 @@ export const Login = (props) => {
           name="password"
         />
 
-        <button  type="submit">Log In</button>
+        <button type="submit">Log In</button>
+        <p className="text">or login using,</p>
+        <div className="alt-login">
+          <div className="facebook"></div>
+          <div className="google"></div>
+        </div>
       </form>
       <p>
         If you don't have an account?
-        <button className="link-btn" onClick={()=>props.onFormSwitch('register')}>Register here ..!</button>
+        <button
+          className="link-btn"
+          onClick={() => props.onFormSwitch("register")}
+        >
+          Register here ..!
+        </button>
       </p>
-      
     </div>
   );
 };
